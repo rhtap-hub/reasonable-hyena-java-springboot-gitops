@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: reasonable-hyena-java-springboot-gitops-repository
+spec:
+  url: https://github.com/rhtap-hub/reasonable-hyena-java-springboot-gitops

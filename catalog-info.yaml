@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: reasonable-hyena-java-springboot-gitops
+  description: This is GitOps manifest for reasonable-hyena-java-springboot   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: reasonable-hyena-java-springboot
+    janus-idp.io/tekton: reasonable-hyena-java-springboot 
+    backstage.io/kubernetes-id: reasonable-hyena-java-springboot 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:reasonable-hyena-java-springboot
